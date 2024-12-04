@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  library-api:
+    build:
+      context: ./library-api
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./library-api:/app
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - DB_HOST=YOUR_DB_HOST
+      - DB_USER=YOUR_DB_USER
+      - DB_PASS=YOUR_DB_PASSWORD
+      - DB_NAME=YOUR_DB_NAME
+
+  library-web:
+    build:
+      context: ./library-web
+    ports:
+      - "3001:3000"
+    depends_on:
+      - library-api
+
+  db:
+    image: mysql:8
+    environment:
+      - MYSQL_ROOT_PASSWORD=YOUR_DB_PASSWORD
+      - MYSQL_DATABASE=YOUR_DATABASE
+    volumes:
+      - db-data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  db-data:
