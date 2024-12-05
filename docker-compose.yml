@@ -1,13 +1,13 @@
 version: '3.8'
 
 services:
-  library-api:
+  libraryapi:
     build:
-      context: ./library-api
+      context: ./libraryapi
     ports:
       - "3000:3000"
     volumes:
-      - ./library-api:/app
+      - ./libraryapi:/app
     depends_on:
       db:
         condition: service_healthy
@@ -17,9 +17,9 @@ services:
       - DB_PASS=YOUR_DB_PASSWORD
       - DB_NAME=YOUR_DB_NAME
 
-  library-web:
+  libraryweb:
     build:
-      context: ./library-web
+      context: ./libraryweb
     ports:
       - "3001:3000"
     depends_on:
