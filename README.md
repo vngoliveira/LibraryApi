@@ -17,7 +17,7 @@ Esta é uma API RESTful para gerenciar uma biblioteca, oferecendo funcionalidade
 ## Contribuindo
 Veja o arquivo CONTRIBUTING.md para mais informações sobre como contribuir.
 ## Autores
-- Andre Crispim de Oliveira - 01008087
+- André Crispim de Oliveira - 01008087
 - Maria Micaelle da Silva Aguiar - 01461200
 - Rafael Câmara Albuquerque Alheiros - 011018601
 - Vitoria Nathaly Gomes de Oliveira - 01482475
