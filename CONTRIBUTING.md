@@ -27,7 +27,7 @@ Este projeto é uma API para gerenciar livros, usuários e empréstimos em uma b
    git push origin main/nome-da-sua-feature
 5. Crie um Pull Request no repositório original.
 ## Fluxo de Trabalho
-(librarydocs/Assets/gitEstagiosRepositorioLocal.png)
+![Fluxo de trabalho](librarydocs/Assets/gitEstagiosRepositorioLocal.png)
 
 Agradecemos sua colaboração!
 
