@@ -21,6 +21,8 @@ Esta é uma API RESTful para gerenciar uma biblioteca, oferecendo funcionalidade
    DB_USER=root
    DB_PASSWORD=senha
    DB_NAME=library
+   DB_PORT=3306
+   DB_DIALECT=mysql
 7. Instale as dependências e inicie o frontend:
    ```bash
    cd ..
